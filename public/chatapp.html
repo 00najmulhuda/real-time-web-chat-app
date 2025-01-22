@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Chat App</title>
+    <link rel="stylesheet" href="chatapp.css">
+</head>
+<body>
+    <div id="login-container" class="login-container">
+        <div class="logo-img"> 
+            <img src="Chatzip-removebg-preview.png" alt="" class="logo">
+         </div>
+        <h2>Login to Chat</h2>
+        <div class="info">
+            <input type="text" id="username" required>
+            <label for="username">Username</label>
+        </div>
+        <input type="button" id="login-btn" value="Login">
+    </div>
+    
+    <div class="chat-container" style="display:none;">
+       
+        <h2>Chat Room</h2>
+        <div id="chat-box" class="chat-box"></div>
+        <input type="text" id="chat-input" placeholder="Type a message..." autocomplete="off">
+        <button id="send-btn">Send</button>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="chatapp.js"></script>
+</body>
+</html>
